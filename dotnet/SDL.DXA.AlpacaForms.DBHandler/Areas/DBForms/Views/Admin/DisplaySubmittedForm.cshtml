@@ -1,0 +1,27 @@
+﻿@model SubmittedForm
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Areas/DBForms/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model == null)
+{
+    <h1>No form was found</h1>
+}
+else
+{
+    <h1>Form Fields</h1>
+    <div class="list-group">
+        @foreach (var fieldName in Model.FormData.Keys.Cast<string>())
+        {
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">@(fieldName.Substring(0,1).ToUpper() + fieldName.Substring(1))</h4>
+                <p class="list-group-item-text">
+                    @Model.FormData[fieldName]
+                </p>
+            </a>
+        }
+    </div>
+}
+ 
+

@@ -1,0 +1,19 @@
+﻿@model  IList<DBForm>
+@{
+    ViewBag.Title = "All Database Forms";
+    Layout = "~/Areas/DBForms/Views/Shared/_Layout.cshtml";
+}
+
+<h1>All Database Forms</h1>
+<div class="list-group">
+    @foreach (var form in Model)
+    {
+        <a href="/form/admin/listSubmitted/@form.Id" class="list-group-item">
+            <h4 class="list-group-item-heading">@form.Title</h4>
+            <p class="list-group-item-text">
+                Submitted forms: @form.Count
+            </p>
+        </a>
+    }
+</div>
+ 

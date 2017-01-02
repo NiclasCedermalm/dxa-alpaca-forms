@@ -1,0 +1,25 @@
+﻿@model  DBForm
+@{
+    ViewBag.Title = "Submitted Form";
+    Layout = "~/Areas/DBForms/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model == null)
+{
+    <h1>No forms found</h1>
+}
+else
+{
+    <h1>@Model.Title : Submitted Forms</h1>
+    <div class="list-group">
+        @foreach (var form in Model.SubmittedForms)
+        {
+            <a href="/form/admin/get/@Model.Id/@form.SequenceId" class="list-group-item">
+                <h4 class="list-group-item-heading">ID: @form.SequenceId</h4>
+                <p class="list-group-item-text">
+                    Date: @form.SubmitDate
+                </p>
+            </a>
+        }
+    </div>
+}

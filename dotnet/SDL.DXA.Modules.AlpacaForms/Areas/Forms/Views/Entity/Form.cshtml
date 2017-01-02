@@ -1,0 +1,27 @@
+﻿@model Form
+<div @Html.DxaEntityMarkup()>
+    @if (!string.IsNullOrEmpty(Model.Title))
+    {
+        <h3 @Html.DxaPropertyMarkup(Model, "Title")}>@Model.Title</h3>
+    }
+
+    @{
+        var formId = Model.Id.Replace("-", "_");
+    }
+
+    <script>
+        var alpaca_form_@(formId) = @Html.Raw(Model.AggregatedDefinition);
+    </script>
+   
+    @if (!WebRequestContext.IsPreview)
+    {
+        @* If we put in an Anti Forgery Token, the Page can't be edited in XPM anymore *@ 
+        <div id="csrf-@formId">
+            @Html.AntiForgeryToken()
+        </div>
+    }
+
+    <div class="alpaca-form" id="@formId">
+    </div>
+    
+</div>
