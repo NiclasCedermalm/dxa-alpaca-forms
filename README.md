@@ -18,8 +18,8 @@ in the C#/Java dependencies.
 Install
 --------
 
-1. Import the [Forms Content Porter package](./blob/master/cms/Forms-Module-v1.0.0.zip) into your CMS instance
-2. Install the Alpaca Forms designer by unpacking the [Form Designer ZIP](./blob/master/cms/FormBuilder.zip) under %SDLWEB_HOME%/web/
+1. Import the [Forms Content Porter package](https://raw.githubusercontent.com/NiclasCedermalm/dxa-alpaca-forms/master/cms/Forms-Module-v1.0.0.zip) into your CMS instance
+2. Install the Alpaca Forms designer by unpacking the [Form Designer ZIP](https://raw.githubusercontent.com/NiclasCedermalm/dxa-alpaca-forms/master/cms/FormBuilder.zip) under %SDLWEB_HOME%/web/
 3. Convert it to an application in the IIS console
 4. Update the definition for the Form schema
     - Update the custom URL for the metadata field 'formDefinition':
@@ -27,7 +27,7 @@ Install
 5. Define XPM content type(s) for forms (optional)
 6. Republish the 'Publish Settings' & 'Publish HTML Design' pages and issue '/admin/refresh' to update the definitions in DXA
 7. Install the DXA modules to your DXA:
-    - .NET: Unzip the [DXA modules ZIP file](./blob/master/dotnet/compiled/AlpacaFormsModules-v1.0.0.zip) under your DXA root
+    - .NET: Unzip the [DXA modules ZIP file](https://raw.githubusercontent.com/NiclasCedermalm/dxa-alpaca-forms/master/dotnet/compiled/AlpacaFormsModules-v1.0.0.zip) under your DXA root
     - Java: Compile the Java and install it your local Maven repository. Add the following to your webapp's pom.xml:
 
     ```
