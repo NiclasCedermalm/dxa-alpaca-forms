@@ -29,6 +29,7 @@ Install
 7. Install the DXA modules to your DXA:
     - .NET: Unzip the following ZIP file under your DXA root
     - Java: Compile the Java and install it your local Maven repository. Add the following to your webapp's pom.xml:
+
     ```
     <dependency>
         <groupId>com.sdl.dxa.modules.alpacaforms</groupId>
@@ -49,6 +50,7 @@ Setup:
 2. Compile the code
   - .NET: Deploy DDLs and defined MVC Areas to your DXA.NET instance (provided in the ZIP above)
   - Java: add db handler to your webapp's pom.xml:
+
     ```
     <dependency>
         <groupId>com.sdl.dxa.modules.alpacaforms</groupId>
@@ -56,17 +58,22 @@ Setup:
         <version>1.0.0</version>
     </dependency>
     ```
+
 3. Configure the database access:
   - .NET Web.config, example:
+
    ```
    <!-- Alpaca Forms DB Connection -->
 	 <add key="alpacaforms-db-connection" value="Data Source=(local);Initial Catalog=forms_db;User ID=FormUser;Password=alpaca"/>
    ```
- - Java dxa.properties, example using MS-SQL:
+
+   - Java dxa.properties, example using MS-SQL:
+
    ```
    form.db.jdbcUrl=jdbc:sqlserver://localhost:1433;databaseName=form_db;user=FormUser;password=alpaca
    form.db.jdbcDriverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
    ```
+
 4. After restarting/redeploying your DXA instance you are ready to create DB forms
 5. When creating forms in the CMS set the metadata field 'Form Handler' to 'DB-Form' to address the database form handler.
 6. All submitted form data are available at http://[DXA HOST]/form/admin/list
