@@ -82,16 +82,16 @@ Table Creation SQL:
 (This is made for MS-SQL but can easily be modified for other RDMBS)
 ```
 CREATE TABLE SUBMITTED_FORM(
-	ID int NULL,
-	FORM_ID varchar(20) NULL,
-	SUBMIT_DATE date NULL
+	ID int NOT NULL,
+	FORM_ID varchar(20) NOT NULL,
+	SUBMIT_DATE date NOT NULL
 )
 GO
 
 CREATE TABLE SUBMITTED_FORM_FIELD(
-	ID int NULL,
-	NAME varchar(100) NULL,
-	VALUE varchar(4000) NULL
+	ID int NOT NULL,
+	NAME varchar(100) NOT NULL,
+	VALUE varchar(4000) NOT NULL
 )
 GO
 
