@@ -1,18 +1,18 @@
 DXA Alpaca Forms
 =====================
 
-The DXA Alpaca forms modules is based on [Alpaca.JS](http://www.alpacajs.org/) forms and DXA.
+The DXA Alpaca forms module is based on [Alpaca.JS](http://www.alpacajs.org/) forms and DXA.
 Through the provided form designer extension, forms can be created directly inline from the SDL Web CMS GUI. The forms are managed as standard SDL Web CMS components and can be added to arbitrary DXA pages.
 The forms are Javascript/JQuery based and can easily be skinned using the DXA HTML design mechanism.
 
 The forms can submit data to a configurable end-point, such as a RESTful web service. The Forms DXA module also comes with a built-in controller that can dispatch form data to various handlers that can process the data, such as store into a database, send an e-mail, pass data to a CRM etc.
 
-The Forms DXA modules also supports prevention of CSRF (Cross-Site Request Forgery) attacks.
+The Forms DXA module also supports prevention of CSRF (Cross-Site Request Forgery) attacks.
 
 Prerequisites
 ----------------
 
-DXA 1.7 and SDL Web 8/8.5. Older versions of DXA should possible to use with some minor tweaks
+DXA 1.7 and SDL Tridion Sites 8/8.5. Older versions of DXA should possible to use with some minor tweaks
 in the C#/Java dependencies.
 
 Install
@@ -107,8 +107,9 @@ Future enhancements
 
 Below are some enhancements to be consider in future versions:
 * Multi-step forms
-* Improved forms designer with a SDL Web look&feel
+* Improved forms designer with a SDL Tridion look&feel
 * XPM inline editor
+* Support for DXA 2.0
 
 Branching model
 ----------------
